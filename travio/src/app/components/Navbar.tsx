@@ -39,33 +39,27 @@ const Navbar = () => {
   const pages = ["Gallery", "Testimonials", "FAQ", "Contact"];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 bg-[#FFF8F0] text-[#3E2C23] ${isScrolled ? "bg-opacity-90 shadow-lg" : "bg-opacity-80"}`}>
+      <div className="container mx-auto px-6 py-4 flex items-center">
         {/* Logo */}
         <Link href="/" className="font-bold text-xl text-primary">
           Travio
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="hover:text-primary transition-colors">
+        <div className="hidden md:flex items-center space-x-8 mx-auto">
+          <Link href="/" className="hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1">
             Home
           </Link>
-          <Link href="/about" className="hover:text-primary transition-colors">
+          <Link href="/about" className="hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1">
             About Us
           </Link>
           
           {/* Destinations Dropdown */}
-          <div className="relative">
-            <button 
-              onClick={() => toggleDropdown("destinations")}
-              className="flex items-center hover:text-primary transition-colors"
-            >
+          <div className="relative group" onMouseEnter={() => setIsDropdownOpen(prev => ({ ...prev, destinations: true }))} onMouseLeave={() => setIsDropdownOpen(prev => ({ ...prev, destinations: false }))}>
+            <div className="flex items-center hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1 cursor-pointer">
               Destinations
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+            </div>
             
             <AnimatePresence>
               {isDropdownOpen.destinations && (
@@ -80,7 +74,7 @@ const Navbar = () => {
                     <Link 
                       key={item} 
                       href={`/destinations/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="block px-4 py-2 text-sm hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm transition-transform hover:translate-x-1"
                     >
                       {item}
                     </Link>
@@ -91,16 +85,10 @@ const Navbar = () => {
           </div>
           
           {/* Pages Dropdown */}
-          <div className="relative">
-            <button 
-              onClick={() => toggleDropdown("pages")}
-              className="flex items-center hover:text-primary transition-colors"
-            >
+          <div className="relative group" onMouseEnter={() => setIsDropdownOpen(prev => ({ ...prev, pages: true }))} onMouseLeave={() => setIsDropdownOpen(prev => ({ ...prev, pages: false }))}>
+            <div className="flex items-center hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1 cursor-pointer">
               Pages
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+            </div>
             
             <AnimatePresence>
               {isDropdownOpen.pages && (
@@ -109,13 +97,13 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                 >
                   {pages.map((item) => (
                     <Link 
                       key={item} 
                       href={`/${item.toLowerCase()}`}
-                      className="block px-4 py-2 text-sm hover:bg-gray-100"
+                      className="block px-4 py-2 text-sm transition-transform hover:translate-x-1"
                     >
                       {item}
                     </Link>
@@ -125,14 +113,19 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
           
-          <Link href="/blog" className="hover:text-primary transition-colors">
-            Blog
-          </Link>
         </div>
+
+        {/* Contact Us Button */}
+        <Link 
+          href="/contact"
+          className="hidden md:inline-block bg-[#3E2C23] hover:bg-[#4d382c] text-[#E6D5B8] px-4 py-2 rounded-full transition-colors"
+        >
+          Contact Us
+        </Link>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-gray-700 focus:outline-none"
+          className="md:hidden text-[#3E2C23] focus:outline-none"
           onClick={toggleMobileMenu}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -240,9 +233,6 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
               
-              <Link href="/blog" className="block py-2 hover:text-primary" onClick={toggleMobileMenu}>
-                Blog
-              </Link>
             </div>
           </motion.div>
         )}

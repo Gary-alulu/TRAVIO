@@ -1,24 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travio - Travel Experience Application
+
+Travio is a modern travel experience application built with Next.js that showcases breathtaking destinations and cultural experiences around the world.
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Hero Slider**: Beautiful full-screen image carousel showcasing travel destinations
+- **Featured Destinations**: Grid layout highlighting popular travel locations
+- **Cultural Hook**: Engaging section about cultural experiences and nature
+- **Motion Animations**: Smooth animations using Framer Motion
+- **Responsive Design**: Works on all device sizes
+
+## Project Structure
+
+The main components are located in `src/app/components/`:
+- `ClientSlider.tsx`: Hero image slider component
+- `FeaturedDestinations.tsx`: Grid of featured travel locations
+- `CulturalHook.tsx`: Cultural experience section
+
+## Technologies Used
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Icons
 
 ## Learn More
 

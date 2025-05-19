@@ -1,88 +1,95 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
+import ClientSlider from "./components/ClientSlider";
+import dynamic from 'next/dynamic';
+import CoreValuesSection from "./components/CoreValuesSection";
 
-const ClientSlider = dynamic(() => import("./components/ClientSlider"), { ssr: false });
-
-const images = [
-  "/hero1.jpg",
-  "/hero2.jpg",
-  "/hero3.jpg",
-  "/hero4.jpg",
-  "/hero5.jpg"
-];
+const images = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg"];
 
 import Navbar from "./components/Navbar";
+const FeaturedDestinations = dynamic(() => import('./components/FeaturedDestinations'), { ssr: false });
+const CulturalHook = dynamic(() => import('./components/CulturalHook'), { ssr: false });
 
 export default function Home() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true
+    autoplaySpeed: 4000,
+    fade: true,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    arrows: false
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="min-h-screen w-full">
       <Navbar />
-      <div className="absolute inset-0 z-0">
-        <ClientSlider settings={settings}>
-          {images.map((src, index) => (
-            <div key={index} className="relative h-screen w-full">
-              <Image
-                src={src}
-                alt={`Hero image ${index + 1}`}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50" />
-            </div>
-          ))}
-        </ClientSlider>
-       </div>
-       
-       <motion.div 
-         className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white px-4"
-         initial={{ opacity: 0, y: 20 }}
-         animate={{ opacity: 1, y: 0 }}
-         transition={{ duration: 0.8 }}
-       >
-         <motion.h1 
-           className="text-4xl md:text-6xl font-bold mb-6 text-center"
-           whileHover={{ scale: 1.05 }}
-         >
-           Discover Your Next Adventure
-         </motion.h1>
-         <motion.p 
-           className="text-lg md:text-xl mb-8 max-w-2xl text-center"
-           whileHover={{ scale: 1.02 }}
-         >
-           Explore breathtaking destinations around the world
-         </motion.p>
-         <motion.button
-           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full"
-           whileHover={{ scale: 1.05 }}
-           whileTap={{ scale: 0.95 }}
-         >
-           Start Exploring
-         </motion.button>
-       </motion.div>
-       
-       <main className="hidden">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
+      <section className="relative h-screen">
+        <div className="absolute inset-0 z-0">
+          <ClientSlider settings={settings}>
+            {images.map((src, index) => (
+              <div key={index} className="relative h-screen w-full">
+                <Image
+                  src={src}
+                  alt={`Hero image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={100}
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-transparent" />
+              </div>
+            ))}
+          </ClientSlider>
+        </div>
+        
+        <motion.div 
+          className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold mb-6 text-center"
+            whileHover={{ scale: 1.05 }}
+          >
+            Discover Your Next Adventure
+          </motion.h1>
+          <motion.p 
+            className="text-lg md:text-xl mb-8 max-w-2xl text-center"
+            whileHover={{ scale: 1.02 }}
+          >
+            Explore breathtaking destinations around the world
+          </motion.p>
+          <motion.button
+            className="bg-[#E6D5B8] hover:bg-[#D4C4A8] text-gray-800 font-bold py-3 px-8 rounded-full"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Start Exploring
+          </motion.button>
+        </motion.div>
+      </section>
+      
+      <FeaturedDestinations />
+      <CoreValuesSection />
+      <CulturalHook />
+        
+        <main className="hidden">
+          <Image
+            className="dark:invert"
+            src="/next.svg"
+            alt="Next.js logo"
+            width={180}
+            height={38}
+            priority
+          />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}

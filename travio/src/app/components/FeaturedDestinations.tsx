@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function FeaturedDestinations() {
   return (
-    <section className="py-16 bg-[#FFF8F0] px-8 md:px-16">
+    <section className="py-10 md:py-16 bg-[#FFF8F0] px-4 sm:px-8 md:px-16">
       <div className="container mx-auto">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-[#3E2C23] mb-12 text-center"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3E2C23] mb-8 md:mb-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -16,10 +16,10 @@ export default function FeaturedDestinations() {
           Featured Destinations
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           {/* Large Featured Card */}
           <motion.div 
-            className="md:col-span-6 relative group rounded-xl overflow-hidden h-full bg-white shadow-lg"
+            className="md:col-span-6 relative group rounded-xl overflow-hidden h-64 md:h-full bg-white shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -43,7 +43,7 @@ export default function FeaturedDestinations() {
           <div className="md:col-span-6 grid grid-cols-2 gap-4">
             {/* Card 1 */}
             <motion.div 
-              className="relative group rounded-xl overflow-hidden aspect-square bg-white shadow-lg"
+              className="relative group rounded-xl overflow-hidden aspect-[4/3] md:aspect-square bg-white shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -65,7 +65,7 @@ export default function FeaturedDestinations() {
             
             {/* Card 2 */}
             <motion.div 
-              className="relative group rounded-xl overflow-hidden aspect-square bg-white shadow-lg"
+              className="relative group rounded-xl overflow-hidden aspect-[4/3] md:aspect-square bg-white shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -87,7 +87,7 @@ export default function FeaturedDestinations() {
             
             {/* Card 3 */}
             <motion.div 
-              className="relative group rounded-xl overflow-hidden aspect-square bg-white shadow-lg"
+              className="relative group rounded-xl overflow-hidden aspect-[4/3] md:aspect-square bg-white shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -109,7 +109,7 @@ export default function FeaturedDestinations() {
             
             {/* Card 4 */}
             <motion.div 
-              className="relative group rounded-xl overflow-hidden aspect-square bg-white shadow-lg"
+              className="relative group rounded-xl overflow-hidden aspect-[4/3] md:aspect-square bg-white shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}

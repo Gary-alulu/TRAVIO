@@ -51,15 +51,15 @@ const Navbar = () => {
           <Link href="/" className="hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1">
             Home
           </Link>
-          <Link href="/about" className="hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1">
-            About Us
+          <Link href="/bookings" className="hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1">
+            Bookings
           </Link>
           
           {/* Destinations Dropdown */}
           <div className="relative group" onMouseEnter={() => setIsDropdownOpen(prev => ({ ...prev, destinations: true }))} onMouseLeave={() => setIsDropdownOpen(prev => ({ ...prev, destinations: false }))}>
-            <div className="flex items-center hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1 cursor-pointer">
+            <Link href="/destinations" className="flex items-center hover:bg-[rgba(211,188,160,0.2)] transition-colors rounded-md px-3 py-1 cursor-pointer">
               Destinations
-            </div>
+            </Link>
             
             <AnimatePresence>
               {isDropdownOpen.destinations && (
@@ -159,8 +159,8 @@ const Navbar = () => {
               <Link href="/" className="block py-2 hover:text-primary" onClick={toggleMobileMenu}>
                 Home
               </Link>
-              <Link href="/about" className="block py-2 hover:text-primary" onClick={toggleMobileMenu}>
-                About Us
+              <Link href="/bookings" className="block py-2 hover:text-primary" onClick={toggleMobileMenu}>
+                Bookings
               </Link>
               
               <div>

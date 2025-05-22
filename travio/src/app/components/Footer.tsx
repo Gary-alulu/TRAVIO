@@ -10,11 +10,11 @@ const socialIcons = [
 ];
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Destinations", href: "#" },
-  { label: "Travel Tips", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Destinations", href: "/destinations" },
+  { label: "Travel Tips", href: "/travel-tips" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const exploreLinks = [
@@ -100,10 +100,11 @@ export default function Footer() {
           </ul>
         </div>
         {/* Newsletter Signup */}
-        <div className="container mx-auto px-4 sm:px-6 md:px-16 mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
-          <div className="text-center md:text-left text-sm md:text-base text-[#E6D5B8] mb-2 md:mb-0">Subscribe to our newsletter for travel inspiration and offers!</div>
+        <div className="flex flex-col gap-4">
+          <div className="font-semibold text-lg mb-2 text-[#E6D5B8]">Newsletter</div>
+          <div className="text-sm md:text-base text-[#E6D5B8] mb-2">Subscribe to our newsletter for travel inspiration and offers!</div>
           <form
-            className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md mx-auto"
+            className="flex flex-col sm:flex-row items-center gap-3"
             onSubmit={e => { e.preventDefault(); setSubmitted(true); setEmail(""); }}
           >
             <input
@@ -111,18 +112,18 @@ export default function Footer() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="Your email address"
-              className="rounded-full px-4 py-2 w-full sm:w-auto text-[#3E2C23] focus:outline-none focus:ring-2 focus:ring-[#E6D5B8]"
+              className="rounded-full px-4 py-2 w-full text-[#3E2C23] focus:outline-none focus:ring-2 focus:ring-[#E6D5B8] bg-white"
               required
             />
             <button
               type="submit"
-              className="bg-[#E6D5B8] text-[#3E2C23] font-bold px-6 py-2 rounded-full hover:bg-[#d4c4a8] transition-colors w-full sm:w-auto"
+              className="bg-[#E6D5B8] text-[#3E2C23] font-bold px-6 py-2 rounded-full hover:bg-[#d4c4a8] transition-colors w-full sm:w-auto whitespace-nowrap"
             >
               Subscribe
             </button>
           </form>
           {submitted && (
-            <div className="text-green-200 text-xs md:text-sm mt-2 md:mt-0">Thank you for subscribing!</div>
+            <div className="text-green-200 text-sm">Thank you for subscribing!</div>
           )}
         </div>
       </motion.div>

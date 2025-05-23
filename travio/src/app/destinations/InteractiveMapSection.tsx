@@ -16,7 +16,7 @@ export default function InteractiveMapSection() {
     <section className="relative py-16 bg-[#F5E8D8] overflow-hidden">
       <div className="container mx-auto px-4 md:px-16">
         <motion.h2
-          className="text-2xl md:text-4xl font-serif font-bold text-[#3E2C23] mb-10 text-center"
+          className="text-2xl md:text-4xl font-sans font-bold text-[#3E2C23] mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}

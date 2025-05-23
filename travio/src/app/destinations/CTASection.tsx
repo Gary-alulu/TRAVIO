@@ -25,7 +25,7 @@ export default function CTASection() {
         viewport={{ once: true }}
       >
         <motion.h2
-          className="text-3xl md:text-5xl font-serif font-bold text-[#3E2C23] mb-4 drop-shadow-lg"
+          className="text-3xl md:text-5xl font-sans font-bold text-[#3E2C23] mb-4 drop-shadow-lg"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}

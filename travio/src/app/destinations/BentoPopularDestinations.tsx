@@ -66,7 +66,7 @@ export default function BentoPopularDestinations() {
     <section className="py-16 bg-[#FFF8F0]">
       <div className="container mx-auto px-4 md:px-16">
         <motion.h2
-          className="text-2xl md:text-4xl font-serif font-bold text-[#3E2C23] mb-10 text-center"
+          className="text-2xl md:text-4xl font-sans font-bold text-[#3E2C23] mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -97,7 +97,7 @@ export default function BentoPopularDestinations() {
               <div className="relative z-10 p-5 flex flex-col gap-2">
                 <div className="flex items-center gap-2">
                   <motion.h3
-                    className="text-xl md:text-2xl font-serif font-bold text-[#FFF8F0] drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    className="text-xl md:text-2xl font-sans font-bold text-[#FFF8F0] drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
                     whileHover={{ scale: 1.08 }}
                   >
                     {dest.title}

@@ -30,7 +30,7 @@ export default function FeaturedCategories() {
     <section className="py-14 md:py-20 bg-[#F5E8D8]">
       <div className="container mx-auto px-4 md:px-16">
         <motion.h2
-          className="text-2xl md:text-4xl font-serif font-bold text-[#3E2C23] mb-10 text-center"
+          className="text-2xl md:text-4xl font-sans font-bold text-[#3E2C23] mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -60,7 +60,7 @@ export default function FeaturedCategories() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#3E2C23]/80 via-[#3E2C23]/50 to-transparent group-hover:from-[#3E2C23]/60 transition-all duration-300" />
               <div className="relative z-10 p-6 w-full flex flex-col gap-2">
                 <motion.h3
-                  className="text-2xl md:text-3xl font-serif font-bold text-[#FFF8F0] drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  className="text-2xl md:text-3xl font-sans font-bold text-[#FFF8F0] drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
                   whileHover={{ scale: 1.08 }}
                 >
                   {cat.title}

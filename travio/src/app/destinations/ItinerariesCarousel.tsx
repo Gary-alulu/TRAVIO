@@ -38,7 +38,7 @@ export default function ItinerariesCarousel() {
     <section className="py-16 bg-[#F5E8D8]">
       <div className="container mx-auto px-4 md:px-16">
         <motion.h2
-          className="text-2xl md:text-4xl font-serif font-bold text-[#3E2C23] mb-10 text-center"
+          className="text-2xl md:text-4xl font-sans font-bold text-[#3E2C23] mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -69,7 +69,7 @@ export default function ItinerariesCarousel() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3E2C23]/70 via-[#3E2C23]/30 to-transparent" />
               </div>
               <div className="p-6 flex flex-col gap-3 flex-1">
-                <h3 className="text-xl font-serif font-bold text-[#3E2C23] mb-1">{item.title}</h3>
+                <h3 className="text-xl font-sans font-bold text-[#3E2C23] mb-1">{item.title}</h3>
                 <p className="text-[#5A4633] text-base font-light mb-2">{item.description}</p>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="bg-[#E6D5B8] text-[#3E2C23] text-xs font-bold px-3 py-1 rounded-full shadow">{item.price}</span>

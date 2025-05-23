@@ -29,7 +29,7 @@ export default function DestinationsHero() {
         viewport={{ once: true }}
       >
         <motion.h1
-          className="text-3xl md:text-5xl font-serif font-bold text-[#FFF8F0] mb-4 drop-shadow-lg"
+          className="text-3xl md:text-5xl font-sans font-bold text-[#FFF8F0] mb-4 drop-shadow-lg"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}

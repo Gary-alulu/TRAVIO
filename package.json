@@ -3,10 +3,33 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.12.1",
+    "next": "^15.1.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.13"
-  }
+  },
+  "name": "travio",
+  "version": "1.0.0",
+  "description": "Travio is a modern travel experience application built with Next.js that showcases breathtaking destinations and cultural experiences around the world.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gary-alulu/TRAVIO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gary-alulu/TRAVIO/issues"
+  },
+  "homepage": "https://github.com/Gary-alulu/TRAVIO#readme"
 }

@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   const destinations = ["Paris", "Tokyo", "New York", "Bali", "Rome"];
-  const pages = ["Gallery", "Testimonials", "FAQ", "Contact"];
+  const pages = ["Gallery", "Testimonials", "FAQ", "Contact", "About Us", "Blogs"];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 bg-[#FFF8F0] text-[#3E2C23] ${isScrolled ? "bg-opacity-90 shadow-lg" : "bg-opacity-80"}`}>
@@ -102,7 +102,7 @@ const Navbar = () => {
                   {pages.map((item) => (
                     <Link 
                       key={item} 
-                      href={`/${item.toLowerCase()}`}
+                      href={item === 'About Us' ? '/about' : item === 'Blogs' ? '/blog' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
                       className="block px-4 py-2 text-sm transition-transform hover:translate-x-1"
                     >
                       {item}
@@ -221,7 +221,7 @@ const Navbar = () => {
                       {pages.map((item) => (
                         <Link 
                           key={item} 
-                          href={`/${item.toLowerCase()}`}
+                          href={item === 'About Us' ? '/about' : item === 'Blogs' ? '/blog' : `/${item.toLowerCase()}`}
                           className="block py-2 text-sm hover:text-primary"
                           onClick={toggleMobileMenu}
                         >

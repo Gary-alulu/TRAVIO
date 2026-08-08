@@ -6,22 +6,22 @@ const categories = [
   {
     title: "Beaches",
     tagline: "Breathe, Swim, Escape",
-    image: "/category-beach.jpg",
+    image: "/destinations/explore by category/BEACHES.jpg",
   },
   {
     title: "Mountains",
     tagline: "Climb, Explore, Refresh",
-    image: "/category-mountain.jpg",
+    image: "/destinations/explore by category/MOUNTAINS.jpg",
   },
   {
     title: "Cities",
     tagline: "Vibrant, Modern, Alive",
-    image: "/category-city.jpg",
+    image: "/destinations/explore by category/CITIES.jpg",
   },
   {
     title: "Cultural Escapes",
     tagline: "Tradition, Heritage, Wonder",
-    image: "/category-culture.jpg",
+    image: "/destinations/explore by category/CULTURAL ESCAPE.jpg",
   },
 ];
 

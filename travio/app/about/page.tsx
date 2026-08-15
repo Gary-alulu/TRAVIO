@@ -37,20 +37,15 @@ const AboutUsPage = () => {
                 alt={`Hero image ${index + 1}`}
                 fill
                 className="object-cover"
-                priority
-                quality={100}
+                priority={index === 0}
+                loading={index === 0 ? "eager" : "lazy"}
                 sizes="100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-transparent" />
             </div>
           ))}
         </ClientSlider>
-        <motion.div 
-          className="relative z-20 p-8 max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="relative z-20 p-8 max-w-3xl mx-auto">
           <motion.h1 
             className="text-5xl md:text-7xl font-playfair-display font-bold mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -74,7 +69,7 @@ const AboutUsPage = () => {
           >
             Explore Our Mission
           </motion.button>
-        </motion.div>
+        </div>
       </section>
 
       {/* Rest of the sections remain unchanged */}

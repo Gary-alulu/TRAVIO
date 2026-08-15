@@ -29,6 +29,7 @@ export default function FeaturedDestinations() {
               src="/hero1.jpg"
               alt="Featured Destination"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
@@ -53,6 +54,7 @@ export default function FeaturedDestinations() {
                 src="/hero2.jpg"
                 alt="Destination 1"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
@@ -75,6 +77,7 @@ export default function FeaturedDestinations() {
                 src="/hero3.jpg"
                 alt="Destination 2"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
@@ -97,6 +100,7 @@ export default function FeaturedDestinations() {
                 src="/hero1.jpg"
                 alt="Destination 3"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
@@ -119,6 +123,7 @@ export default function FeaturedDestinations() {
                 src="/hero2.jpg"
                 alt="Destination 4"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">

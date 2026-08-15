@@ -47,10 +47,10 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-[#3E2C23] mb-4">
-            Let's Get You on the Right Path
+            Let&apos;s Get You on the Right Path
           </h1>
           <p className="text-lg text-[#5A4633]">
-            Whether it's a question, concern, or booking help, we're here for you!
+            Whether it&apos;s a question, concern, or booking help, we&apos;re here for you!
           </p>
         </motion.div>
       </section>
@@ -63,7 +63,7 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold text-[#3E2C23] mb-4">Get in Touch With Us</h2>
             <p className="text-[#5A4633]">
               Planning your next adventure? Need help with bookings or destination info? 
-              Drop us a message — we'd love to hear from you!
+              Drop us a message &mdash; we&apos;d love to hear from you!
             </p>
           </div>
 

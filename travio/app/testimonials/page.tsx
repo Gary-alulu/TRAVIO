@@ -89,7 +89,7 @@ export default function TestimonialsPage() {
             What Our Travelers Say About Travio
           </h1>
           <p className="text-xl text-[#5A4633] max-w-2xl mx-auto">
-            Real stories from people who've turned journeys into lasting memories.
+            Real stories from people who&apos;ve turned journeys into lasting memories.
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ export default function TestimonialsPage() {
           >
             <div className="flex transition-transform duration-500 ease-out"
                  style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
                   className="w-full flex-shrink-0 px-4"
@@ -131,7 +131,7 @@ export default function TestimonialsPage() {
                             <span key={i} className="text-yellow-400 text-xl">★</span>
                           ))}
                         </div>
-                        <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
+                        <p className="text-lg italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="font-semibold">{testimonial.name}</p>
                         <p className="text-sm text-[#5A4633]">
                           {testimonial.role} • {testimonial.location}
@@ -184,7 +184,7 @@ export default function TestimonialsPage() {
                     <p className="text-sm text-[#5A4633]">{testimonial.location}</p>
                   </div>
                 </div>
-                <p className="text-[#3E2C23] italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-[#3E2C23] italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium">{testimonial.role}</span>
                   <div className="flex">

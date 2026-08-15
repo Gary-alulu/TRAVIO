@@ -63,8 +63,7 @@ export default function ItinerariesCarousel() {
                   alt={item.title}
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  quality={90}
-                  sizes="320px"
+                  sizes="(max-width: 768px) 100vw, 320px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3E2C23]/70 via-[#3E2C23]/30 to-transparent" />
               </div>

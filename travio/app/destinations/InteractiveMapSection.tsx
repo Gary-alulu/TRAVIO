@@ -34,11 +34,10 @@ export default function InteractiveMapSection() {
             viewport={{ once: true }}
           >
             <Image
-              src="/map-asia-artistic.jpg"
+              src="/hero3.jpg"
               alt="Artistic Asia/world map"
               fill
-              className="object-cover object-center"
-              quality={90}
+              className="object-cover object-center opacity-80"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#3E2C23]/70 via-[#3E2C23]/30 to-transparent" />

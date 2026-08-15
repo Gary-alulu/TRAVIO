@@ -8,11 +8,10 @@ export default function CTASection() {
       {/* Parallax/Faded Scenic Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/cta-scenic.jpg"
+          src="/hero2.jpg"
           alt="Scenic background"
           fill
           className="object-cover object-center opacity-70"
-          quality={90}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#FFF8F0]/90 via-[#E6D5B8]/80 to-transparent" />

@@ -71,7 +71,7 @@ export default function GalleryPage() {
             fill
             className="object-cover"
             priority
-            quality={100}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/50" />
         </motion.div>
@@ -120,6 +120,7 @@ export default function GalleryPage() {
                 alt={image.alt}
                 width={800}
                 height={600}
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">

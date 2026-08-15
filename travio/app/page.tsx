@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 
 const CoreValuesSection = dynamic(() => import('./components/CoreValuesSection'), { ssr: false });
-const LogoCarousel = dynamic(() => import('./components/LogoCarousel'), { ssr: false });
 const Footer = dynamic(() => import('./components/Footer'), { ssr: true });
 const ClientSlider = dynamic(() => import('./components/ClientSlider'), { ssr: false });
 const FeaturedDestinations = dynamic(() => import('./components/FeaturedDestinations'), { ssr: false });
@@ -43,8 +42,8 @@ export default function Home() {
                     alt={`Hero image ${index + 1}`}
                     fill
                     className="object-cover"
-                    priority
-                    quality={100}
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"}
                     sizes="100vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-transparent" />

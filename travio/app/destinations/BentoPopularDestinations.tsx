@@ -90,7 +90,6 @@ export default function BentoPopularDestinations() {
                 alt={dest.title}
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                quality={90}
                 sizes="(max-width: 768px) 100vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3E2C23]/80 via-[#3E2C23]/40 to-transparent group-hover:from-[#3E2C23]/60 transition-all duration-300" />

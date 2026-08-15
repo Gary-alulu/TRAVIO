@@ -78,12 +78,12 @@ export default function BookingsPage() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/bali-hero.jpg"
+            src="/hero1.jpg"
             alt="Bali Paradise"
             fill
             className="object-cover"
             priority
-            quality={100}
+            sizes="100vw"
           />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#3E2C23]/60 to-transparent z-10" />

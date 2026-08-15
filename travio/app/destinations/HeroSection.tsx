@@ -43,8 +43,8 @@ export default function DestinationsHero() {
                   alt={`Destination hero image ${index + 1}`}
                   fill
                   className="object-cover object-center"
-                  priority
-                  quality={100}
+                  priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
                   sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3E2C23]/80 via-[#3E2C23]/60 to-transparent" />

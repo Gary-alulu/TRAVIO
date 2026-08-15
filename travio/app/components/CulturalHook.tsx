@@ -40,7 +40,7 @@ export default function CulturalHook() {
                 fill
                 className="object-cover"
                 priority={idx === 0}
-                quality={100}
+                loading={idx === 0 ? "eager" : "lazy"}
                 sizes="100vw"
               />
               <div className="absolute inset-0 bg-black/60" />

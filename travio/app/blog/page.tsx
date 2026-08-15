@@ -89,7 +89,6 @@ export default function BlogPage() {
           fill
           className="object-cover object-center"
           priority
-          quality={100}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
@@ -157,7 +156,7 @@ export default function BlogPage() {
                   alt={post.title}
                   fill
                   className="object-cover object-center rounded-t-2xl"
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="flex-1 flex flex-col p-5">

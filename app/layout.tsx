@@ -22,6 +22,16 @@ export const metadata: Metadata = {
   },
   description:
     "Travio is a modern travel experience application showcasing breathtaking destinations and cultural experiences around the world.",
+  icons: {
+    icon: [
+      { url: "/images/travio%20favicon-01.png", type: "image/png" },
+      { url: "/images/travio favicon-01.png", type: "image/png" },
+    ],
+    shortcut: ["/images/travio%20favicon-01.png"],
+    apple: [
+      { url: "/images/travio%20favicon-01.png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +41,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/images/travio%20favicon-01.png" />
+        <link rel="icon" type="image/png" href="/images/travio favicon-01.png" />
+        <link rel="shortcut icon" type="image/png" href="/images/travio%20favicon-01.png" />
+        <link rel="apple-touch-icon" href="/images/travio%20favicon-01.png" />
+      </head>
       <body
         className={`${poppins.variable} ${playfair.variable} antialiased`}
       >

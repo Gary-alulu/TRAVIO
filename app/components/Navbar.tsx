@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +43,15 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 bg-[#FFF8F0] text-[#3E2C23] ${isScrolled ? "bg-opacity-90 shadow-lg" : "bg-opacity-80"}`}>
       <div className="container mx-auto px-6 py-4 flex items-center">
         {/* Logo */}
-        <Link href="/" className="font-bold text-xl text-primary">
-          Travio
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/travio logo navbar-01-01.png"
+            alt="Travio Logo"
+            width={120}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

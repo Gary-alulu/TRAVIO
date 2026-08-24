@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Accordion, AccordionItem } from '@nextui-org/accordion';
+import { Accordion, AccordionItem } from '@heroui/react';
 
 const FAQPage = () => {
   const faqs = [

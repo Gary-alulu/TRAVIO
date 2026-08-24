@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   },
   description:
     "Travio is a modern travel experience application showcasing breathtaking destinations and cultural experiences around the world.",
+  icons: {
+    icon: "/images/travio favicon-01.png",
+    shortcut: "/images/travio favicon-01.png",
+    apple: "/images/travio favicon-01.png",
+  },
 };
 
 export default function RootLayout({

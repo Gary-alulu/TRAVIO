@@ -10,6 +10,7 @@ const Footer = dynamic(() => import('./components/Footer'), { ssr: true });
 const ClientSlider = dynamic(() => import('./components/ClientSlider'), { ssr: false });
 const FeaturedDestinations = dynamic(() => import('./components/FeaturedDestinations'), { ssr: false });
 const CulturalHook = dynamic(() => import('./components/CulturalHook'), { ssr: false });
+const IntroAnimation = dynamic(() => import('./components/IntroAnimation'), { ssr: false });
 
 const images = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg"];
 
@@ -30,6 +31,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full">
+      <IntroAnimation />
       <Navbar />
       <section className="relative h-screen">
         <div className="absolute inset-0 z-0">

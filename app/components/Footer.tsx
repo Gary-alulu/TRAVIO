@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import React from 'react';
+import Image from "next/image";
 
 const socialIcons = [
   {
@@ -64,7 +65,13 @@ export default function Footer() {
       >
         {/* Brand Identity */}
         <div className="flex flex-col items-start gap-4">
-          <span className="text-3xl md:text-4xl font-serif font-bold text-[#E6D5B8] tracking-tight mb-2">Travio</span>
+          <Image
+            src="/images/travio logo footer-01.png"
+            alt="Travio Logo"
+            width={140}
+            height={50}
+            className="h-14 w-auto object-contain mb-1"
+          />
           <span className="text-[#E6D5B8] text-base mb-3">Wander More. Worry Less.</span>
           <div className="flex gap-4 mt-2">
             {socialIcons.map((icon, idx) => (
